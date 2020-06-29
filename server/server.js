@@ -17,7 +17,7 @@ var editorSocketService = editorSocketServiceFunc(io);
 
 // connect to MongoDB Atlas
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://peiyuan:lpyyes123@cluster0-22oor.mongodb.net/problems");
+mongoose.connect("mongodb+srv://[root]:[password]@cluster0-22oor.mongodb.net/problems");
 
 const restRouter = require("./routes/rest.js");
 
