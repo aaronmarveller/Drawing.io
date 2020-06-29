@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Problem } from '../../models/problem.model';
-import { DataService } from '../../services/data.service';
+import { Problem } from "../../models/problem.model";
+import { DataService } from "../../service/data.service";
 
 const DEFAULT_PROBLEM: Problem = Object.freeze({
   id: 0,
   name: '',
   desc: '',
-  difficulty: 'easy'
-});
+  diff: 'easy'
+})
 
 @Component({
   selector: 'app-new-problem',
@@ -16,19 +16,16 @@ const DEFAULT_PROBLEM: Problem = Object.freeze({
 })
 export class NewProblemComponent implements OnInit {
   newProblem: Problem = Object.assign({}, DEFAULT_PROBLEM);
-  difficulties: string[] = ['easy', 'medium', 'hard', 'super'];
-  
+  diffs: string[] = ['easy', 'medium', 'hard', 'super'];
+
   constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   addProblem() {
     this.dataService.addProblem(this.newProblem);
-    this.newProblem = Object.assign({}, DEFAULT_PROBLEM);   
-    /*
-      to not comflict, for example, if a value is changed in dataservice
-      the object will also be changed
-    */
+    this.newProblem = Object.assign({}, DEFAULT_PROBLEM);
   }
+
 }

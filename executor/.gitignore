@@ -1,2 +1,9 @@
 /env
 *.pyc
+*.log
+
+.idea
+*.iml
+*.ipr
+*.iws
+

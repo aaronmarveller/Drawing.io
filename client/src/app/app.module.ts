@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { routing } from './app.routes'; //* add routing
-import { HttpClientModule } from '@angular/common/http';
-
+import { routing } from "./app.routes";
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from "@angular/forms";
 import { ProblemListComponent } from './components/problem-list/problem-list.component';
 import { ProblemDetailComponent } from './components/problem-detail/problem-detail.component';
 import { NewProblemComponent } from './components/new-problem/new-problem.component';
+import { HttpClientModule } from "@angular/common/http";
 import { EditorComponent } from './components/editor/editor.component';
+
 
 @NgModule({
   declarations: [

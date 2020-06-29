@@ -1,3 +1,4 @@
+import json
 from flask import Flask
 import docker
 from docker.errors import APIError
@@ -7,7 +8,7 @@ from docker.errors import ImageNotFound
 
 app = Flask(__name__)
 
-IMAGE_NAME = 'thomas:1.0'
+IMAGE_NAME = 'aaron:1.0'
 client = docker.from_env()
 
 
